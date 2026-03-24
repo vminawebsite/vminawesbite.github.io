@@ -1,10 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="refresh" content="0; url=https://sites.google.com/view/vminawebsite">
-    <title>VMINawebsite</title>
+    <title>Loading...</title>
+    <style>
+        body { background-color: #000; color: white; font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+    </style>
 </head>
 <body>
-    <p>Redirecting to VMINawebsite... <a href="https://sites.google.com/view/vminawebsite">Click here if it doesn't load.</a></p>
+
+    <script>
+        // 1. Define the website you want to "cloak"
+        var url = "https://sites.google.com/view/vminawebsite";
+
+        // 2. Open a new about:blank tab
+        var win = window.open();
+        win.document.body.style.margin = '0';
+        win.document.body.style.height = '100vh';
+
+        // 3. Create an iframe inside that tab
+        var iframe = win.document.createElement('iframe');
+        iframe.style.border = 'none';
+        iframe.style.width = '100%';
+        iframe.style.height = '100%';
+        iframe.style.margin = '0';
+        iframe.src = url;
+
+        // 4. Put the iframe into the about:blank page
+        win.document.body.appendChild(iframe);
+
+        // 5. Optional: Change the text on the original GitHub page
+        document.body.innerHTML = "<h1>google sites game (go to sites.google.com/view/VMINawebsite to visit the real site)</h1>";
+    </script>
+
 </body>
 </html>
